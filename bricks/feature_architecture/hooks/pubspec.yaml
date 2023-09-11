@@ -1,0 +1,24 @@
+name: api_structure_hooks
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  mason: ">=0.1.0-dev.49 <0.1.0"
+  yaml: ^3.1.1
+  dart_style: ^2.2.5
+  # yaml: ^3.1.1
+  # dart_style: ^2.2.5
+# dev_dependencies:
+# mobx_codegen: ^2.1.1
+# retrofit_generator: ^4.2.0
+# build_runner: ^2.3.3
+# flutter_launcher_icons: ^0.12.0
+# json_serializable: ^6.6.1
+# source_gen: ^1.2.6
+# flutter_layout_grid: ^2.0.1
+# hive_generator: ^2.0.0
+# smartstruct_generator: ^1.3.0
+# very_good_analysis: ^3.0.1
+
+# flutter_lints: ^2.0.1

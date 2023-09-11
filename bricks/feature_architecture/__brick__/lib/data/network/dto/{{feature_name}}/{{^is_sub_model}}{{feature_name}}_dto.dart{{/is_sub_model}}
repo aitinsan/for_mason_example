@@ -1,0 +1,19 @@
+import 'package:json_annotation/json_annotation.dart';
+{{#sub_model_list_names}}import 'package:for_mason_example/data/network/dto/{{feature_name}}/{{model_name}}_dto.dart';
+{{/sub_model_list_names}}
+part '../../../../generated/data/network/dto/{{feature_name}}/{{feature_name}}_dto.g.dart';
+
+@JsonSerializable()
+class {{feature_name.pascalCase()}}Dto {
+  {{#properties}}
+  {{{dto_type}}}? {{name}};
+  {{/properties}}
+
+  {{feature_name.pascalCase()}}Dto({ {{#properties}}
+    this.{{name}},{{/properties}}
+
+  });
+  factory {{feature_name.pascalCase()}}Dto.fromJson(Map<String, dynamic> json) =>
+      _${{feature_name.pascalCase()}}DtoFromJson(json);
+  Map<String, dynamic> toJson() => _${{feature_name.pascalCase()}}DtoToJson(this);
+}

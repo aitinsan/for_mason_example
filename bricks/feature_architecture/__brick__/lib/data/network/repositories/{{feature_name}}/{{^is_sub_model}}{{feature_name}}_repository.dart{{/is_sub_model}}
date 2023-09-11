@@ -1,0 +1,40 @@
+import 'package:for_mason_example/data/network/api_clients/{{feature_name}}/{{feature_name}}_client.dart';
+import 'package:for_mason_example/data/network/dto/{{feature_name}}/{{feature_name}}_response.dart';
+import 'package:for_mason_example/data/network/mappers/{{feature_name}}/{{feature_name}}_mapper.dart';
+import 'package:for_mason_example/domain/models/{{feature_name}}/{{feature_name}}.dart';
+import 'package:for_mason_example/domain/repository/{{feature_name}}/i_{{feature_name}}_repository.dart';
+import 'package:for_mason_example/internal/exceptions/data_access_exception.dart';
+import 'package:dio/dio.dart';
+import 'package:easy_localization/easy_localization.dart';
+
+class {{feature_name.pascalCase()}}Repository implements I{{feature_name.pascalCase()}}Repository {
+  final api = {{feature_name.pascalCase()}}Client();
+
+  @override
+  Future<List<{{feature_name.pascalCase()}}>?> get{{feature_name.pascalCase()}}List() async {
+    try {
+      {{feature_name.pascalCase()}}Response result = await api.get{{feature_name.pascalCase()}}(); //TODO
+
+      if (result.isError) {
+        throw (DataAccessException(result.errors!));
+      }
+
+      if (result.data != null) {
+        return result.data!
+            .map((dto) => {{feature_name.pascalCase()}}MapperImpl().toModel(dto))
+            .toList();
+      }
+      return null;
+    } catch (e, st) {
+      if (e is DioError) {
+        if (e.response?.statusCode == 302) {
+          throw DataAccessException('Неверный пароль');
+        }
+        if (e.response?.statusCode == 7) {
+          throw DataAccessException('Нет соединения');
+        }
+      }
+      rethrow;
+    }
+  }
+}

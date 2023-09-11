@@ -1,0 +1,21 @@
+import 'package:for_mason_example/internal/network/basis_responce.dart';
+import 'package:for_mason_example/data/network/dto/{{feature_name}}/{{feature_name}}_dto.dart';
+import 'package:json_annotation/json_annotation.dart';
+
+part '../../../../generated/data/network/dto/{{feature_name}}/{{feature_name}}_response.g.dart';
+
+@JsonSerializable()
+class {{feature_name.pascalCase()}}Response extends BasisResponseDto {
+  List<{{feature_name.pascalCase()}}Dto>? data;
+
+  {{feature_name.pascalCase()}}Response({
+    this.data,
+    bool? succeeded,
+    String? message,
+    String? errors,
+  }) : super(succeeded: succeeded, message: message, errors: errors);
+
+  factory {{feature_name.pascalCase()}}Response.fromJson(Map<String, dynamic> json) =>
+      _${{feature_name.pascalCase()}}ResponseFromJson(json);
+  Map<String, dynamic> toJson() => _${{feature_name.pascalCase()}}ResponseToJson(this);
+}
