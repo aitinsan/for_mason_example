@@ -32,7 +32,6 @@ Future<void> generateSubModels(HookContext context) async {
             defaultValue: true,
           )) {
         final subModel = element['model'];
-        print('subModel $subModel');
         final vars = {
           'feature_name': context.vars['feature_name'],
           'hive_number': logger.prompt(
