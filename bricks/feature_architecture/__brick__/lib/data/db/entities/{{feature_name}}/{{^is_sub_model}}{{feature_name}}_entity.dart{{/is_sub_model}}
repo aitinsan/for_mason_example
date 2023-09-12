@@ -8,13 +8,13 @@ class {{feature_name.pascalCase()}}Entity {
 
   {{#properties}}
   @HiveField({{index}})
-  final  {{{entity_type}}}? {{name}};
+  final  {{{entity_type}}}? {{name.camelCase()}};
   {{/properties}}
 
 
 
   {{feature_name.pascalCase()}}Entity({
     {{#properties}}
-    this.{{name}},{{/properties}}
+    this.{{name.camelCase()}},{{/properties}}
   });
 }

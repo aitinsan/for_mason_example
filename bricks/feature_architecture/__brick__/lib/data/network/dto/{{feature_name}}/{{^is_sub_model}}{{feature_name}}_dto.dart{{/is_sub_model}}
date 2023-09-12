@@ -6,11 +6,11 @@ part '../../../../generated/data/network/dto/{{feature_name}}/{{feature_name}}_d
 @JsonSerializable()
 class {{feature_name.pascalCase()}}Dto {
   {{#properties}}
-  {{{dto_type}}}? {{name}};
+  {{{dto_type}}}? {{name.camelCase()}};
   {{/properties}}
 
   {{feature_name.pascalCase()}}Dto({ {{#properties}}
-    this.{{name}},{{/properties}}
+    this.{{name.camelCase()}},{{/properties}}
 
   });
   factory {{feature_name.pascalCase()}}Dto.fromJson(Map<String, dynamic> json) =>

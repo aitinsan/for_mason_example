@@ -9,16 +9,16 @@ part '../../../../generated/data/network/mappers/{{feature_name}}/{{feature_name
 
 @Mapper()
 abstract class {{feature_name.pascalCase()}}Mapper {
-  {{#sub_model_list_names}}@Mapping(source: mapFrom{{model_name.pascalCase()}}Dto, target: "{{model_name.camelCase()}}{{#isList}}List{{/isList}}")
+  {{#sub_model_list_names}}@Mapping(source: mapFrom{{model_name.pascalCase()}}Dto, target: "{{model_name.camelCase()}}")
   {{/sub_model_list_names}}
   {{feature_name.pascalCase()}} toModel({{feature_name.pascalCase()}}Dto model);
 }
 {{#sub_model_list_names}}
   {{#isList}}
   List<{{model_name.pascalCase()}}>? mapFrom{{model_name.pascalCase()}}Dto({{feature_name.pascalCase()}}Dto source) =>
-    source.{{model_name.camelCase()}}List == null
+    source.{{model_name.camelCase()}} == null
         ? null
-        : source.{{model_name.camelCase()}}List!
+        : source.{{model_name.camelCase()}}!
             .map((e) => {{model_name.pascalCase()}}MapperImpl().toModel(e))
             .toList();
   {{/isList }}

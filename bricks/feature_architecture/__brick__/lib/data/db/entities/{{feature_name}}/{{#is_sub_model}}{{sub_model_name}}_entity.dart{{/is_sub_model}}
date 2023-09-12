@@ -7,10 +7,10 @@ part '../../../../generated/data/db/entities/{{feature_name}}/{{sub_model_name}}
 class {{sub_model_name.pascalCase()}}Entity {
   {{#properties}}
   @HiveField({{index}})
-  final  {{{entity_type}}}? {{name}};
+  final  {{{entity_type}}}? {{name.camelCase()}};
   {{/properties}}
   {{sub_model_name.pascalCase()}}Entity({
     {{#properties}}
-    this.{{name}},{{/properties}}
+    this.{{name.camelCase()}},{{/properties}}
   });
 }

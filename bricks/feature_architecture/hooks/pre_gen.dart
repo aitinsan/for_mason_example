@@ -102,7 +102,7 @@ Future<void> run(HookContext context) async {
           dtoType = type;
         }
         final property = {
-          'name': isList ? '${key}List' : key,
+          'name': key,
           'type': type,
           'entity_type': entityType,
           'dto_type': dtoType,

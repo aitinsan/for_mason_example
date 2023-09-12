@@ -55,8 +55,8 @@ Future<void> generateSubModels(HookContext context) async {
 
         await pre_gen.run(context..vars = vars);
 
-        final modelTestGen =
-            await MasonGenerator.fromBrick(Brick.path('bricks/api_structure'));
+        final modelTestGen = await MasonGenerator.fromBrick(
+            Brick.path('bricks/feature_architecture'));
         modelTestGen.generate(
             DirectoryGeneratorTarget(
               Directory(('${folders.join('/')}')),

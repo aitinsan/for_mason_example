@@ -9,27 +9,27 @@ part '../../../../generated/data/db/mappers/{{feature_name}}/{{sub_model_name}}_
 
 @Mapper()
 abstract class {{sub_model_name.pascalCase()}}EntityMapper {
-  {{#sub_model_list_names}}@Mapping(source: mapFrom{{model_name.pascalCase()}}, target: "{{model_name.camelCase()}}{{#isList}}List{{/isList}}")
+  {{#sub_model_list_names}}@Mapping(source: mapFrom{{model_name.pascalCase()}}, target: "{{model_name.camelCase()}}")
   {{/sub_model_list_names}}
   {{sub_model_name.pascalCase()}}Entity fromModel({{sub_model_name.pascalCase()}} model);
   
-  {{#sub_model_list_names}}@Mapping(source: mapTo{{model_name.pascalCase()}}, target: "{{model_name.camelCase()}}{{#isList}}List{{/isList}}")
+  {{#sub_model_list_names}}@Mapping(source: mapTo{{model_name.pascalCase()}}, target: "{{model_name.camelCase()}}")
   {{/sub_model_list_names}}
   {{sub_model_name.pascalCase()}} toModel({{sub_model_name.pascalCase()}}Entity model);
 }
 {{#sub_model_list_names}}
   {{#isList}}
   List<{{model_name.pascalCase()}}Entity>? mapFrom{{model_name.pascalCase()}}({{sub_model_name.pascalCase()}} source) =>
-    source.{{model_name.camelCase()}}List == null
+    source.{{model_name.camelCase()}} == null
         ? null
-        : source.{{model_name.camelCase()}}List!
+        : source.{{model_name.camelCase()}}!
             .map((e) => {{model_name.pascalCase()}}EntityMapperImpl().fromModel(e))
             .toList();
 
   List<{{model_name.pascalCase()}}>? mapTo{{model_name.pascalCase()}}({{sub_model_name.pascalCase()}}Entity source) =>
-    source.{{model_name.camelCase()}}List == null
+    source.{{model_name.camelCase()}} == null
         ? null
-        : source.{{model_name.camelCase()}}List!
+        : source.{{model_name.camelCase()}}!
             .map((e) => {{model_name.pascalCase()}}EntityMapperImpl().toModel(e))
             .toList();
   {{/isList }}

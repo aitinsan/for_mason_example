@@ -2,10 +2,10 @@
 {{/sub_model_list_names}}
 class {{feature_name.pascalCase()}} {
 {{#properties}}
-  final  {{{type}}}? {{name}};
+  final  {{{type}}}? {{name.camelCase()}};
 {{/properties}}
 
 const {{feature_name.pascalCase()}}({ {{#properties}}
-    this.{{name}},{{/properties}}
+    this.{{name.camelCase()}},{{/properties}}
 });
 }
