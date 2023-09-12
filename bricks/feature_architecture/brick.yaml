@@ -48,11 +48,15 @@ vars:
 #   /data
 #     /db
 #       /entities
-#         /{{feature_name}}
-#           {{feature_name}}_entity.dart
 #       /mappers
-#         /{{feature_name}}
-#           {{feature_name}}_entity_mapper.dart
 #       /repositories
-#         /{{feature_name}}_local_repository.dart
+#     /network
+#       /api_clients
+#       /dto
+#       /mappers
+#       /repositories
+#   /domain
+#     /models
+#     /repositories
+#     /usecases
 
