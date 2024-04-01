@@ -1,4 +1,4 @@
-{{#sub_model_list_names}}import 'package:for_mason_example/domain/models/{{feature_name}}/{{model_name}}.dart';
+{{#sub_model_list_names}}import 'package:{{project_name}}/domain/models/{{feature_name}}/{{model_name}}.dart';
 {{/sub_model_list_names}}
 class {{sub_model_name.pascalCase()}} {
 {{#properties}}

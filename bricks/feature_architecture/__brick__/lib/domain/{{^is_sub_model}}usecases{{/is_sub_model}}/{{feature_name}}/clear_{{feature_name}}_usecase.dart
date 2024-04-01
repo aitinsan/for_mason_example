@@ -1,5 +1,5 @@
-import 'package:for_mason_example/domain/repository/{{feature_name}}/i_{{feature_name}}_local_repository.dart';
-import 'package:for_mason_example/domain/usecases/{{feature_name}}/i_clear_{{feature_name}}_usecase.dart';
+import 'package:{{project_name}}/domain/repository/{{feature_name}}/i_{{feature_name}}_local_repository.dart';
+import 'package:{{project_name}}/domain/usecases/{{feature_name}}/i_clear_{{feature_name}}_usecase.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class Clear{{feature_name.pascalCase()}}ListUseCase implements IClear{{feature_name.pascalCase()}}ListUsecase {

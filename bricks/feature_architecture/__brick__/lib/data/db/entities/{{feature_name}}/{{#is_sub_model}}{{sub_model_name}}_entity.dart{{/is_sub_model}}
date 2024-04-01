@@ -1,5 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
-{{#sub_model_list_names}}import 'package:for_mason_example/data/db/entities/{{feature_name}}/{{model_name}}_entity.dart';
+{{#sub_model_list_names}}import 'package:{{project_name}}/data/db/entities/{{feature_name}}/{{model_name}}_entity.dart';
 {{/sub_model_list_names}}
 part '../../../../generated/data/db/entities/{{feature_name}}/{{sub_model_name}}_entity.g.dart';
 

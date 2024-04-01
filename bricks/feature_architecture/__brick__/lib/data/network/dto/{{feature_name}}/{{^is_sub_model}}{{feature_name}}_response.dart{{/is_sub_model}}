@@ -1,5 +1,5 @@
-import 'package:for_mason_example/internal/network/basis_responce.dart';
-import 'package:for_mason_example/data/network/dto/{{feature_name}}/{{feature_name}}_dto.dart';
+import 'package:{{project_name}}/internal/network/basis_responce.dart';
+import 'package:{{project_name}}/data/network/dto/{{feature_name}}/{{feature_name}}_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part '../../../../generated/data/network/dto/{{feature_name}}/{{feature_name}}_response.g.dart';

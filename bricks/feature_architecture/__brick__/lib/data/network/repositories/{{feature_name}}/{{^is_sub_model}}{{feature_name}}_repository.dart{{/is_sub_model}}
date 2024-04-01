@@ -1,9 +1,9 @@
-import 'package:for_mason_example/data/network/api_clients/{{feature_name}}/{{feature_name}}_client.dart';
-import 'package:for_mason_example/data/network/dto/{{feature_name}}/{{feature_name}}_response.dart';
-import 'package:for_mason_example/data/network/mappers/{{feature_name}}/{{feature_name}}_mapper.dart';
-import 'package:for_mason_example/domain/models/{{feature_name}}/{{feature_name}}.dart';
-import 'package:for_mason_example/domain/repository/{{feature_name}}/i_{{feature_name}}_repository.dart';
-import 'package:for_mason_example/internal/exceptions/data_access_exception.dart';
+import 'package:{{project_name}}/data/network/api_clients/{{feature_name}}/{{feature_name}}_client.dart';
+import 'package:{{project_name}}/data/network/dto/{{feature_name}}/{{feature_name}}_response.dart';
+import 'package:{{project_name}}/data/network/mappers/{{feature_name}}/{{feature_name}}_mapper.dart';
+import 'package:{{project_name}}/domain/models/{{feature_name}}/{{feature_name}}.dart';
+import 'package:{{project_name}}/domain/repository/{{feature_name}}/i_{{feature_name}}_repository.dart';
+import 'package:{{project_name}}/internal/exceptions/data_access_exception.dart';
 import 'package:dio/dio.dart';
 import 'package:easy_localization/easy_localization.dart';
 

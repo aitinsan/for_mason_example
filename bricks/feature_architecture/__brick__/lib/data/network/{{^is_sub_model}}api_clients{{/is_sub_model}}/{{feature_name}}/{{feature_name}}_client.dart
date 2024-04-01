@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:for_mason_example/data/network/dto/{{feature_name}}/{{feature_name}}_response.dart';
-import 'package:for_mason_example/internal/config/config.dart';
+import 'package:{{project_name}}/data/network/dto/{{feature_name}}/{{feature_name}}_response.dart';
+import 'package:{{project_name}}/internal/config/config.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:retrofit/retrofit.dart';

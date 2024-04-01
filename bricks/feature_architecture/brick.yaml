@@ -25,6 +25,11 @@ environment:
 #  * an optional prompt phrase used when asking for the variable
 #  * a list of values (enums only)
 vars:
+  project_name:
+    default: some_project
+    type: string
+    description: project name
+    prompt: What is the name of this project? (ex:baydala)
   feature_name:
     default: some_feature
     type: string

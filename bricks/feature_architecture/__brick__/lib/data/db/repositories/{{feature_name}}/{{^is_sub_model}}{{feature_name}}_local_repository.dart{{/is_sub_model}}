@@ -1,8 +1,8 @@
-import 'package:for_mason_example/data/db/entities/{{feature_name}}/{{feature_name}}_entity.dart';
-import 'package:for_mason_example/data/db/mappers/{{feature_name}}/{{feature_name}}_entity_mapper.dart';
-import 'package:for_mason_example/domain/models/{{feature_name}}/{{feature_name}}.dart';
-import 'package:for_mason_example/domain/repository/{{feature_name}}/i_{{feature_name}}_local_repository.dart';
-{{#sub_model_list_names}}import 'package:for_mason_example/data/db/entities/{{feature_name}}/{{model_name}}_entity.dart';
+import 'package:{{project_name}}/data/db/entities/{{feature_name}}/{{feature_name}}_entity.dart';
+import 'package:{{project_name}}/data/db/mappers/{{feature_name}}/{{feature_name}}_entity_mapper.dart';
+import 'package:{{project_name}}/domain/models/{{feature_name}}/{{feature_name}}.dart';
+import 'package:{{project_name}}/domain/repository/{{feature_name}}/i_{{feature_name}}_local_repository.dart';
+{{#sub_model_list_names}}import 'package:{{project_name}}/data/db/entities/{{feature_name}}/{{model_name}}_entity.dart';
 {{/sub_model_list_names}}
 import 'package:hive/hive.dart';
 

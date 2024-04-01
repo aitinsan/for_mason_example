@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-{{#sub_model_list_names}}import 'package:for_mason_example/data/network/dto/{{feature_name}}/{{model_name}}_dto.dart';
+{{#sub_model_list_names}}import 'package:{{project_name}}/data/network/dto/{{feature_name}}/{{model_name}}_dto.dart';
 {{/sub_model_list_names}}
 part '../../../../generated/data/network/dto/{{feature_name}}/{{feature_name}}_dto.g.dart';
 
